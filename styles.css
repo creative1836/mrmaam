@@ -2,20 +2,42 @@ body {
     padding-top: 50px;
     font-family: Avenir;
 }
+
 .navbar {
+    width: 100%;
     background-color: white;  
     text-align: center;
-    letter-spacing: .1em;
+    letter-spacing: .2em;
 }
+
+.navbar .nav {
+    margin: 0%;
+    display: table;
+    width: 100%;
+}
+
+.navbar .nav li {
+    display: table-cell;
+    width: 1%;
+    float: none; 
+}
+
+/*.navbar .nav li:not(:first-child):before {
+    content: " | ";
+}*/
+
 .navbar-collapse .navbar-nav {
     display: inline-block;
     float: none;    
 }
-.navbar-nav li {
 
+.navbar-nav ul {
+    margin: 0;
+    padding: 0; 
 }
+
 h1 { 
     font-size: 70px; 
-    font-weight: bold; 
-    letter-spacing: -.062em;
+    font-weight: 900; 
+    letter-spacing: -.08em;
 }
