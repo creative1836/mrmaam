@@ -1,0 +1,21 @@
+body {
+    padding-top: 50px;
+    font-family: Avenir;
+}
+.navbar {
+    background-color: white;  
+    text-align: center;
+    letter-spacing: .1em;
+}
+.navbar-collapse .navbar-nav {
+    display: inline-block;
+    float: none;    
+}
+.navbar-nav li {
+
+}
+h1 { 
+    font-size: 70px; 
+    font-weight: bold; 
+    letter-spacing: -.062em;
+}
