@@ -1,43 +1,202 @@
 body {
-    padding-top: 50px;
-    font-family: Avenir;
-}
-
-.navbar {
-    width: 100%;
-    background-color: white;  
-    text-align: center;
-    letter-spacing: .2em;
-}
-
-.navbar .nav {
-    margin: 0%;
-    display: table;
-    width: 100%;
-}
-
-.navbar .nav li {
-    display: table-cell;
-    width: 1%;
-    float: none; 
-}
-
-/*.navbar .nav li:not(:first-child):before {
-    content: " | ";
-}*/
-
-.navbar-collapse .navbar-nav {
-    display: inline-block;
-    float: none;    
-}
-
-.navbar-nav ul {
     margin: 0;
-    padding: 0; 
+    font-family: "monotype";
 }
 
-h1 { 
-    font-size: 70px; 
-    font-weight: 900; 
-    letter-spacing: -.08em;
+.container-fluid {
+    padding: 0;
+}
+
+.logo {
+    width: 60vw;
+    height: auto;
+}
+
+.home {
+    padding-top: 100px;
+    padding-left: 100px;
+    color: #000;
+}
+
+.page {
+    color: #ff0063;
+    padding-top: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-family: "hk-grotesk-bold";
+    font-weight: bold;
+    font-size:3vw;
+}
+
+p {
+    font-size: 1.7vw;
+    font-family: "hk-grotesk";
+    color: ghostwhite;
+}
+
+.icon {
+    display: none;
+}
+
+
+li  {
+    background-color: transparent;
+    color: black;
+    font-family: "hk-grotesk-bold";
+    float: left;
+}
+
+li a:link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 16px;
+}
+
+li a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+li a:active {
+    text-decoration: none;
+}
+
+li a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+li {
+    font-size: 1.2vw;
+}
+
+.title {
+    font-size: 1.7vw;
+}
+
+
+ul {
+    list-style-type: none;
+    position: fixed;
+    padding: 16px;
+    width: 100%;
+}
+
+#menu {
+    color: white;
+    z-index: 100;
+}
+
+ul.topnav li:not(:first-child) {
+    float: right;
+}
+
+.col-sm-6 {
+    color: ghostwhite;
+    font-family: "hk-grotesk";
+}
+
+h3 {
+    font-size: 1.8vw;
+}
+
+h4 {
+    font-size: 1.5vw;
+}
+
+@font-face {
+  font-family: 'hk-grotesk-bold';
+  src: url('fonts/hk-grotesk/HKGrotesk-Bold.eot'); /* IE9 Compat Modes */
+  src: url('fonts/hk-grotesk/HKGrotesk-Bold?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/hk-grotesk/HKGrotesk-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/hk-grotesk/HKGrotesk-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/hk-grotesk/HKGrotesk-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'hk-grotesk';
+  src: url('fonts/hk-grotesk/HKGrotesk-Light.eot'); /* IE9 Compat Modes */
+  src: url('fonts/hk-grotesk/HKGrotesk-Light?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/hk-grotesk/HKGrotesk-Light.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/hk-grotesk/HKGrotesk-Light.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/hk-grotesk/HKGrotesk-Light.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+
+/* Media queries! */
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.topnav li a:hover {
+  display: inline-block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {
+      display: none;
+    }
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+
+    ul.topnav.responsive{
+        background-color: black;
+    }
+    
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+    transition: 0.3s;
+
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+    transition: 0.3s;
+  }
+    
+
+    ul.topnav.responsive li a:hover {
+      display: inline-block;
+      color: #ff0063;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 17px;
+    }
 }

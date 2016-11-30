@@ -1,62 +1,104 @@
 <!DOCTYPE html>
-<!--Site for Mr Ma'am-->
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="fullpagejs/vendors/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="fullpagejs/jquery.fullPage.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<html lang="en">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta charset="utf-8">
-        <title>MR. MA'AM</title>
-        <meta name="generator" content="Bootply" />
-       	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript">
         
-        <!--jQuery-->
-        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-        
-        <!--Bootstrap-->
-        <link rel="stylesheet" href="libraries/bootstrap/bootstrap.min.css"></link>
-        <script src="libraries/bootstrap/bootstrap.min.js"></script>
-        <link rel = "stylesheet" href = "libraries/bootstrap-toggle/css/bootstrap-toggle.min.css"></link>
-        <script src = "libraries/bootstrap-toggle/js/bootstrap-toggle.min.js"></script>
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            sectionsColor: ['#ff0063', '#000', '#000', '#000', "#000"],
+            anchors: ['home', 'about', 'submit', 'team', 'contact']
+        });
+    });
+    </script>
     
-        <!--Standard links-->
-        <link rel = "stylesheet" href = "styles.css"></link>
-        <script src = "main.js"></script>
-    </head>
+    <script>
+    var a = $("#menu").offset().top;
+    $(document).scroll(function(){
+        if($(this).scrollTop() > a){   
+           $('#menu').css({"background":"black"});
+        } else {
+           $('#menu').css({"background":"transparent"});
+        }
+    });
+    </script>
+</head>
+
+<body>
+<ul class = "topnav" id="menu">
+        <li><a class="title active" href="#home">MR. MA'AM</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#submit">SUBMIT</a></li>
+        <li><a href="#team">TEAM</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li class="icon">
+            <a href="javascript:void(0);" onclick="showMenu()">&#9776;</a>
+        </li>
+</ul>
+<div class="container-fluid" id="fullpage">
+    <div class="section home"><img class="logo" src="img/main.png"></div>
+    <div class="section page" id="startchange">
+        About Us <p></p>
+        <p>MR. MA’AM began as a joint venture among Emory University students seeking to provide a space to appreciate and honor literary and artistic work, with particular interest in increasing the visibility of queerness through creative outlets. As writers, artists, and creators, MR. MA’AM aims to publish work that epitomizes the wit, struggles, victories, and emotions of the queer community and their unique experiences.</p>
     
-    <body>
-        <div class="navbar navbar-fixed-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
+    </div>
+    <div class="section page">Submit Your Work<p></p>
+        <p>Please fill out the form and send all submissions to <u>mrmaammag@gmail.com</u></p>
+        <div class="typeform-widget" data-url="https://creative1836.typeform.com/to/cUDwJ3" data-text="mrma&#039;am" style="width:100%;height:60%;"></div>
+            <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'widget.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
+    </div>
+    
+    <div class="section page">Current Masthead<p></p>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Editors in Chief</h3>
+                <h4>Jessika Bouvier</h4>
+                <h4>Josh Oberlander</h4>
+                <br>
+                <h3>Design Editor</h3>
+                <h4>Brielle Goeller</h4>
+                <br>
+                <h3>Art Director</h3>
+                <h4>Laila Hasnain</h4>
             </div>
-            <div class="collapse navbar-collapse">
-              <ul class="nav navbar-nav">
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#submit">SUBMIT</a></li>
-                <li><a href="#team">TEAM</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-              </ul>
-            </div><!--/.nav-collapse -->
-          </div>
+            <div class="col-sm-6">
+                <h3>Managing Editors</h3>
+                <h4>Talia Green</h4>
+                <h4>Alexa Palomo</h4>
+                <br>
+                <h3>Marketing Chair</h3>
+                <h4>Brady Goodman-Williams</h4>
+                <br>
+                <h3>Support Staff</h3>
+                <h4>Liz Rivera</h4>
+            </div>
         </div>
+    </div>
+    <div class="section page">Contact Us<p></p>
+    <p>Have a question, comment, or just want to say hi?</p>
+    <p>Drop us a line at <u>mrmaammag@gmail.com</u></p>
+    </div>
+</div>
+</body>
 
-        <div class="container">
-          <div class="text-center">
-            <h1>MR. MA'AM</h1>
-            <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-          </div>
-        </div><!-- /.container -->
-        <!-- script references -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>        
-    </body>
-    
-    <footer>
         
-    </footer>
+    <script>
+    function showMenu() {
+        var x = document.getElementById("menu");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+    </script>
+    
 </html>
