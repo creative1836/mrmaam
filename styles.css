@@ -25,54 +25,17 @@ body {
     padding-right: 100px;
     font-family: "hk-grotesk-bold";
     font-weight: bold;
-    font-size:3vw;
+    font-size:25px;
 }
 
 p {
-    font-size: 1.7vw;
+    font-size: 15px;
     font-family: "hk-grotesk";
     color: ghostwhite;
 }
 
 .icon {
     display: none;
-}
-
-
-li  {
-    background-color: transparent;
-    color: black;
-    font-family: "hk-grotesk-bold";
-    float: left;
-}
-
-li a:link {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 16px;
-}
-
-li a:hover {
-    color: white;
-    text-decoration: none;
-}
-
-li a:active {
-    text-decoration: none;
-}
-
-li a:visited {
-    color: white;
-    text-decoration: none;
-}
-
-li {
-    font-size: 1.2vw;
-}
-
-.title {
-    font-size: 1.7vw;
 }
 
 
@@ -83,48 +46,12 @@ ul {
     width: 100%;
 }
 
-#menu {
-    color: white;
-    z-index: 100;
+li  {
+    background-color: transparent;
+    color: black;
+    font-family: "hk-grotesk-bold";
+    float: left;
 }
-
-ul.topnav li:not(:first-child) {
-    float: right;
-}
-
-.col-sm-6 {
-    color: ghostwhite;
-    font-family: "hk-grotesk";
-}
-
-h3 {
-    font-size: 1.8vw;
-}
-
-h4 {
-    font-size: 1.5vw;
-}
-
-@font-face {
-  font-family: 'hk-grotesk-bold';
-  src: url('fonts/hk-grotesk/HKGrotesk-Bold.eot'); /* IE9 Compat Modes */
-  src: url('fonts/hk-grotesk/HKGrotesk-Bold?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/hk-grotesk/HKGrotesk-Bold.woff2') format('woff2'), /* Super Modern Browsers */
-       url('fonts/hk-grotesk/HKGrotesk-Bold.woff') format('woff'), /* Pretty Modern Browsers */
-       url('fonts/hk-grotesk/HKGrotesk-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
-}
-
-@font-face {
-  font-family: 'hk-grotesk';
-  src: url('fonts/hk-grotesk/HKGrotesk-Light.eot'); /* IE9 Compat Modes */
-  src: url('fonts/hk-grotesk/HKGrotesk-Light?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/hk-grotesk/HKGrotesk-Light.woff2') format('woff2'), /* Super Modern Browsers */
-       url('fonts/hk-grotesk/HKGrotesk-Light.woff') format('woff'), /* Pretty Modern Browsers */
-       url('fonts/hk-grotesk/HKGrotesk-Light.ttf')  format('truetype'); /* Safari, Android, iOS */
-}
-
-
-/* Media queries! */
 
 ul.topnav {
   list-style-type: none;
@@ -155,6 +82,51 @@ ul.topnav li a:hover {
 
 ul.topnav li.icon {display: none;}
 
+#menu {
+    color: white;
+    z-index: 100;
+}
+
+ul.topnav li:not(:first-child) {
+    float: right;
+}
+
+.col-xs-6 {
+    color: ghostwhite;t
+    font-family: "hk-grotesk";
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+h4 {
+    font-size: 15px;
+    opacity: 0.65;
+}
+
+@font-face {
+  font-family: 'hk-grotesk-bold';
+  src: url('fonts/hk-grotesk/HKGrotesk-Bold.eot'); /* IE9 Compat Modes */
+  src: url('fonts/hk-grotesk/HKGrotesk-Bold?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/hk-grotesk/HKGrotesk-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/hk-grotesk/HKGrotesk-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/hk-grotesk/HKGrotesk-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'hk-grotesk';
+  src: url('fonts/hk-grotesk/HKGrotesk-Light.eot'); /* IE9 Compat Modes */
+  src: url('fonts/hk-grotesk/HKGrotesk-Light?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/hk-grotesk/HKGrotesk-Light.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/hk-grotesk/HKGrotesk-Light.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/hk-grotesk/HKGrotesk-Light.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+
+/* Media queries! */
+
 @media screen and (max-width:680px) {
   ul.topnav li:not(:first-child) {
       display: none;
@@ -177,6 +149,7 @@ ul.topnav li.icon {display: none;}
     right: 0;
     top: 0;
   }
+    
   ul.topnav.responsive li {
     float: none;
     display: inline;
