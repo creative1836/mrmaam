@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
     <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -8,8 +7,11 @@
     <script type="text/javascript" src="fullpagejs/jquery.fullPage.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript">
+        
     $(document).ready(function() {
         $('#fullpage').fullpage({
             sectionsColor: ['#ff0063', '#000', '#000', '#000', "#000"],
@@ -17,6 +19,7 @@
         });
     });
     </script>
+    
     <script>
     var a = $("#menu").offset().top;
     $(document).scroll(function(){
@@ -30,14 +33,15 @@
 </head>
 
 <body>
-<ul id="menu">
-    <li class="title"><a href="#home">MR. MA'AM</a></li>
-    <span class="menuItems">
+<ul class = "topnav" id="menu">
+        <li><a class="title active" href="#home">MR. MA'AM</a></li>
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#submit">SUBMIT</a></li>
         <li><a href="#team">TEAM</a></li>
         <li><a href="#contact">CONTACT</a></li>
-    </span>
+        <li class="icon">
+            <a href="javascript:void(0);" onclick="showMenu()">&#9776;</a>
+        </li>
 </ul>
 <div class="container-fluid" id="fullpage">
     <div class="section home"><img class="logo" src="img/main.png"></div>
@@ -82,4 +86,17 @@
     </div>
 </div>
 </body>
+
+        
+    <script>
+    function showMenu() {
+        var x = document.getElementById("menu");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+    </script>
+    
 </html>

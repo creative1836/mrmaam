@@ -34,6 +34,11 @@ p {
     color: ghostwhite;
 }
 
+.icon {
+    display: none;
+}
+
+
 li  {
     background-color: transparent;
     color: black;
@@ -83,7 +88,7 @@ ul {
     z-index: 100;
 }
 
-.menuItems {
+ul.topnav li:not(:first-child) {
     float: right;
 }
 
@@ -116,4 +121,82 @@ h4 {
        url('fonts/hk-grotesk/HKGrotesk-Light.woff2') format('woff2'), /* Super Modern Browsers */
        url('fonts/hk-grotesk/HKGrotesk-Light.woff') format('woff'), /* Pretty Modern Browsers */
        url('fonts/hk-grotesk/HKGrotesk-Light.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+
+/* Media queries! */
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.topnav li a:hover {
+  display: inline-block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {
+      display: none;
+    }
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+
+    ul.topnav.responsive{
+        background-color: black;
+    }
+    
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+    transition: 0.3s;
+
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+    transition: 0.3s;
+  }
+    
+
+    ul.topnav.responsive li a:hover {
+      display: inline-block;
+      color: #ff0063;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 17px;
+    }
 }
