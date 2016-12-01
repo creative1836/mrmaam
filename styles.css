@@ -3,6 +3,11 @@ body {
     font-family: "monotype";
 }
 
+.break{
+    display:block;
+    margin:0 0 1em;
+}
+
 .container-fluid {
     padding: 0;
 }
