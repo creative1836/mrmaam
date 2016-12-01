@@ -25,16 +25,16 @@ body {
 
 .page {
     color: #ff0063;
-    padding-top: 100px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-top: 75px;
+    padding-left: 75px;
+    padding-right: 75px;
     font-family: "hk-grotesk-bold";
     font-weight: bold;
     font-size:25px;
 }
 
 p {
-    font-size: 15px;
+    font-size: 14px;
     font-family: "hk-grotesk";
     color: ghostwhite;
 }
