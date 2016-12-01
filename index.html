@@ -15,19 +15,10 @@
     $(document).ready(function() {
         $('#fullpage').fullpage({
             sectionsColor: ['#ff0063', '#000', '#000', '#000', "#000"],
-            anchors: ['home', 'about', 'submit', 'team', 'contact']
+            anchors: ['home', 'about', 'submit', 'team', 'contact'],
+            normalScrollElements: '.submission',
+            normalScrollElementTouchThreshold: 1
         });
-    });
-    </script>
-    
-    <script>
-    var a = $("#menu").offset().top;
-    $(document).scroll(function(){
-        if($(this).scrollTop() > a){   
-           $('#menu').css({"background":"black"});
-        } else {
-           $('#menu').css({"background":"transparent"});
-        }
     });
     </script>
 </head>
