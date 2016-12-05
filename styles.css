@@ -55,6 +55,11 @@ p {
     margin-right: 10px;
 }
 
+a, a:hover, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
 
 ul {
     list-style-type: none;
