@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: "sans-serif";
+    background: black;
 }
 
 .break{
@@ -60,6 +61,7 @@ li  {
 }
 
 ul.topnav {
+  position: fixed;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -146,6 +148,10 @@ h4 {
 }
 
 @media screen and (max-width:680px) {
+    
+    .logo {
+        margin-left: -25px;
+    }
 
     p {
         font-size: 14px;
@@ -164,7 +170,7 @@ h4 {
         background-color: black;
     }
 
-    ul.topnav.responsive {position: relative;}
+    ul.topnav.responsive {position: fixed;}
     
     ul.topnav.responsive li.icon {
         position: absolute;
