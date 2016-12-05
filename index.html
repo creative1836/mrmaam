@@ -2,12 +2,14 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
     <script src="fullpagejs/vendors/jquery.easings.min.js"></script>
     <script type="text/javascript" src="fullpagejs/jquery.fullPage.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="shufflejs/shuffletext.jquery.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript">
@@ -17,8 +19,19 @@
             sectionsColor: ['#ff0063', '#000', '#000', '#000', "#000"],
             anchors: ['home', 'about', 'submit', 'team', 'contact'],
             normalScrollElements: '.submission',
-            normalScrollElementTouchThreshold: 6
+            normalScrollElementTouchThreshold: 5,
+            autoScrolling: false,
         });
+        
+        $('#text').ShuffleText([
+            'poetry',
+            'short story',
+            'photography',
+            'dramatic literature',
+            'creative nonfiction',
+            'visual arts',
+            'fiction'
+        ], {loop: true, delay: '1500'});
     });
     </script>
 </head>
@@ -38,12 +51,16 @@
     </span>
 </ul>
 <div class="container-fluid" id="fullpage">
-    <div class="section home"><img class="logo" src="img/main.png"></div>
+    <div class="section home">
+        <img class="logo" src="img/main.png">
+        <br>
+        <div class="scramble"><a href="#submit2">Submit your <span id="text"></span></a></div>
+    </div>
     <div class="section page" id="startchange">
         <span class = "circle"></span>About Us
         <p>MR. MA’AM began as a joint venture among Emory University students seeking to provide a space to appreciate and honor literary and artistic work, with particular interest in increasing the visibility of queerness through creative outlets. As writers, artists, and creators, MR. MA’AM aims to publish work that epitomizes the wit, struggles, victories, and emotions of the queer community and their unique experiences.</p>
     </div>
-    <div class="section page submission">Submit Your Work<p></p>
+    <div class="section page submission" id="submit2">Submit Your Work<p></p>
         <p>MR. MA’AM is seeking literary and artists work that reflects and explores queer themes and experiences. While writers need not be LGBTQ+, submitted work should be intrinsically linked to queerness and sexuality. Beyond this, there are no formal/genre guidelines. We only ask that the pieces be daring, innovative, and relevant in contemporary society.</p>
         <span class="break"></span>
         <p>Accepted genres include short fiction, creative nonfiction, dramatic literature, poetry, and visual art. Submitting to MR. MA’AM is free. Please email submissions to <u style="color:#ff0063">mrmaammag@gmail.com</u>. In the body of the email, include your name, university affiliation, and submission genre (poetry, short story, etc.). Please follow the guidelines below when submitting your piece.

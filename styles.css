@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: "sans-serif";
+    background: black;
 }
 
 .break{
@@ -13,13 +14,16 @@ body {
 }
 
 .logo {
+    position: absolute;
+    right: 0;
+    left: 0;
     width: 60vw;
     height: auto;
+    margin: 0 auto;
 }
 
 .home {
-    padding-top: 100px;
-    padding-left: 100px;
+    padding-top: 40px;
     color: #000;
 }
 
@@ -33,6 +37,13 @@ body {
     font-size:25px;
 }
 
+.scramble {
+    margin-top: 400px;
+    text-align: center;
+    font-family: "Ropa Sans", sans-serif;
+    font-size: 45px;
+}
+
 p {
     font-size: 16px;
     font-family: "hk-grotesk";
@@ -44,13 +55,10 @@ p {
     margin-right: 10px;
 }
 
-/*Added */
-.section-start {
-    background-color: rgba(255,255,255,0.9);
-    background-color: #ff0063;
-    border-radius: 2.5px;
-    padding: 10px;
-    margin-bottom: 10px; 
+
+a, a:hover, a:visited {
+    text-decoration: none;
+    color: black;
 }
 
 ul {
@@ -68,6 +76,7 @@ li  {
 }
 
 ul.topnav {
+  position: fixed;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -151,9 +160,22 @@ h4 {
     .submission {
         overflow-y: scroll;
     }
+    
+    .home {
+         padding-top: 100px;
+    }
+    
+    .scramble {
+        margin-top: 300px;
+    }
 }
 
 @media screen and (max-width:680px) {
+    
+    .scramble {
+        margin-top: 200px;
+        font-size: 20px;
+    }
 
     p {
         font-size: 14px;
@@ -172,7 +194,7 @@ h4 {
         background-color: black;
     }
 
-    ul.topnav.responsive {position: relative;}
+    ul.topnav.responsive {position: fixed;}
     
     ul.topnav.responsive li.icon {
         position: absolute;
