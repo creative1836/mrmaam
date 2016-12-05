@@ -159,9 +159,18 @@ h4 {
     .home {
          padding-top: 100px;
     }
+    
+    .scramble {
+        margin-top: 300px;
+    }
 }
 
 @media screen and (max-width:680px) {
+    
+    .scramble {
+        margin-top: 200px;
+        font-size: 20px;
+    }
 
     p {
         font-size: 14px;
