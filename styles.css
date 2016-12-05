@@ -14,13 +14,16 @@ body {
 }
 
 .logo {
+    position: absolute;
+    right: 0;
+    left: 0;
     width: 60vw;
     height: auto;
+    margin: 0 auto;
 }
 
 .home {
-    padding-top: 100px;
-    padding-left: 100px;
+    padding-top: 40px;
     color: #000;
 }
 
@@ -32,6 +35,13 @@ body {
     font-family: "hk-grotesk-bold";
     font-weight: bold;
     font-size:25px;
+}
+
+.scramble {
+    margin-top: 400px;
+    text-align: center;
+    font-family: "Ropa Sans", sans-serif;
+    font-size: 45px;
 }
 
 p {
@@ -145,13 +155,13 @@ h4 {
     .submission {
         overflow-y: scroll;
     }
+    
+    .home {
+         padding-top: 100px;
+    }
 }
 
 @media screen and (max-width:680px) {
-    
-    .logo {
-        margin-left: -25px;
-    }
 
     p {
         font-size: 14px;

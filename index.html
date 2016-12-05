@@ -2,12 +2,14 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
     <script src="fullpagejs/vendors/jquery.easings.min.js"></script>
     <script type="text/javascript" src="fullpagejs/jquery.fullPage.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="shufflejs/shuffletext.jquery.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript">
@@ -20,6 +22,16 @@
             normalScrollElementTouchThreshold: 5,
             autoScrolling: false,
         });
+        
+        $('#text').ShuffleText([
+            'poetry',
+            'short story',
+            'photography',
+            'dramatic literature',
+            'creative nonfiction',
+            'visual arts',
+            'fiction'
+        ], {loop: true, delay: '1500'});
     });
     </script>
 </head>
@@ -39,7 +51,11 @@
     </span>
 </ul>
 <div class="container-fluid" id="fullpage">
-    <div class="section home"><img class="logo" src="img/main.png"></div>
+    <div class="section home">
+        <img class="logo" src="img/main.png">
+        <br>
+        <div class="scramble">Submit your <span id="text"></span></div>
+    </div>
     <div class="section page" id="startchange">
         About Us <p></p>
         <p>MR. MA’AM began as a joint venture among Emory University students seeking to provide a space to appreciate and honor literary and artistic work, with particular interest in increasing the visibility of queerness through creative outlets. As writers, artists, and creators, MR. MA’AM aims to publish work that epitomizes the wit, struggles, victories, and emotions of the queer community and their unique experiences.</p>
