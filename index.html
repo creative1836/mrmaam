@@ -32,6 +32,18 @@
             'visual arts',
             'fiction'
         ], {loop: true, delay: '1500'});
+        
+        $(window).scroll(function() {
+           var hT = $('#scroll-to').offset().top,
+               hH = $('#scroll-to').outerHeight(),
+               wH = $(window).height(),
+               wS = $(this).scrollTop();
+           if (wS > (hT+hH-wH)){
+                document.querySelectorAll('ul.topnav')[0].style.backgroundColor = 'rgba(255,255,255,0.1)';
+           } else {
+               document.querySelectorAll('ul.topnav')[0].style.backgroundColor = 'rgba(255,255,255,0)';
+           }
+        });
     });
     </script>
 </head>
@@ -56,7 +68,7 @@
         <br>
         <div class="scramble"><a href="#submit2">Submit your <span id="shuffle-text"></span></a></div>
     </div>
-    <div class="section page" id="startchange">
+    <div class="section page" id="scroll-to">
         <span class = "circle"></span>About Us
         <p>MR. MA’AM began as a joint venture among Emory University students seeking to provide a space to appreciate and honor literary and artistic work, with particular interest in increasing the visibility of queerness through creative outlets. As writers, artists, and creators, MR. MA’AM aims to publish work that epitomizes the wit, struggles, victories, and emotions of the queer community and their unique experiences.</p>
     </div>
