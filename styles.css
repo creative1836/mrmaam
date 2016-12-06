@@ -50,6 +50,10 @@ p {
     color: ghostwhite;
 }
 
+.text-shadow {
+    text-shadow: -1.5px 1px #ff0063;
+}
+
 .icon {
     display: none;
     margin-right: 10px;
