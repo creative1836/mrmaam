@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+<!--Fullpage.js, jQuery-->
+    <link rel="stylesheet" type="text/css" href="libraries/jquery.fullPage.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
-    <script src="fullpagejs/vendors/jquery.easings.min.js"></script>
-    <script type="text/javascript" src="fullpagejs/jquery.fullPage.min.js"></script>
+    <script src="libraries/fullpagejs/vendors/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="libraries/fullpagejs/jquery.fullPage.min.js"></script>
+    
+<!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="shufflejs/shuffletext.jquery.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
 
+<!--Other libraries-->
+    <script src="libraries/shufflejs/shuffletext.jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
+    <link href="libraries/hamburgers/dist/hamburgers.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript">
         
@@ -20,7 +25,7 @@
             anchors: ['home', 'about', 'submit', 'team', 'contact'],
             normalScrollElements: '.submission',
             normalScrollElementTouchThreshold: 5,
-            autoScrolling: false,
+            autoScrolling: false
         });
         
         $('#shuffle-text').ShuffleText([
@@ -33,17 +38,27 @@
             'fiction'
         ], {loop: true, delay: '1500'});
         
-        $(window).scroll(function() {
+        
+        $(window).scroll(function() {            
            var hT = $('#scroll-to').offset().top,
                hH = $('#scroll-to').outerHeight(),
                wH = $(window).height(),
-               wS = $(this).scrollTop();
-           if (wS > (hT+hH-wH)){
-                document.querySelectorAll('ul.topnav')[0].style.backgroundColor = 'rgba(255,255,255,0.1)';
+               wS = $(this).scrollTop(),
+               nav = document.querySelectorAll('ul.topnav')[0];
+            
+            var navIsHovered = $('ul.topnav.responsive li:not(:first-child)').is(":hover");
+           
+            if (wS > (hT+hH-wH)){
+                nav.style.backgroundColor = 'rgba(255,255,255,0.1)';
            } else {
-               document.querySelectorAll('ul.topnav')[0].style.backgroundColor = 'rgba(255,255,255,0)';
+               nav.style.backgroundColor = 'rgba(255,255,255,0)';
            }
+<<<<<<< HEAD
         });
+=======
+           document.querySelectorAll('ul.topnav.responsive')[0].style.backgroundColor = 'rgba(255,255,255,0.1)'
+        }); 
+>>>>>>> 00af485... file reorganization, fixed hamburger menu bug + added transition, improved font consistency
     });
     </script>
 </head>
@@ -58,7 +73,13 @@
         <li><a href="#team">TEAM</a></li>
         <li><a href="#contact">CONTACT</a></li>
         <li class="icon">
-            <a href="javascript:void(0);" onclick="showMenu()">&#9776;</a>
+            <a onclick="showMenu()">
+                <button class="hamburger hamburger--spin" type="button">
+                  <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                  </span>
+                </button>
+            </a>
         </li>
     </span>
 </ul>
@@ -128,10 +149,18 @@
         var x = document.getElementById("menu");
         if (x.className === "topnav") {
             x.className += " responsive";
+            x.fadeTo(500, 1)
         } else {
             x.className = "topnav";
         }
     }
+    </script>
+    
+    <script>
+      var $hamburger = $(".hamburger");
+      $hamburger.on("click", function(e) {
+        $hamburger.toggleClass("is-active");
+      });
     </script>
     
 </html>
