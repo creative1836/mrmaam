@@ -15,6 +15,7 @@
 <!--Other-->
     <script src="libraries/shufflejs/shuffletext.jquery.js"></script>
     <link href="libraries/hamburgers/dist/hamburgers.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="main.js"></script>
 </head>
@@ -41,17 +42,20 @@
 </ul>
 <div class="container-fluid" id="fullpage">
     <div class="section home">
-        <img class="logo" src="img/main.png">
-        <br>
-        <div class="scramble"><a href="#submit2">Submit your <span id="shuffle-text"></span></a></div>
+        <div class="homeContainer">
+            <img class="logo" src="img/main.png">
+            <br>
+            <div class="scramble"><a href="#submit2">Submit your <span id="shuffle-text"></span></a></div>
+        </div>
     </div>
-    <div class="section page" id="scroll-to">
+    <div class="section page aboutPage" id="scroll-to">
         <h2>ABOUT US</h2>
         <p><span class="text-shadow">MR. MA’AM</span> began as a joint venture among Emory University students seeking to provide a space to appreciate and honor literary and artistic work, with particular interest in increasing the visibility of queerness through creative outlets. As writers, artists, and creators, MR. MA’AM aims to publish work that epitomizes the wit, struggles, victories, and emotions of the queer community and their unique experiences<span style="color:#ff0063">.</span></p>
         <div class="dash"></div>
     </div>
-    <div class="section page submission" id="submit2"><h2>SUBMIT YOUR WORK</h2><p></p>
-        <p><span class="text-shadow">MR. MA’AM</span> is seeking literary and artists work that reflects and explores queer themes and experiences. While writers need not be LGBTQ+, submitted work should be intrinsically linked to queerness and sexuality. Beyond this, there are no formal/genre guidelines. We only ask that the pieces be daring, innovative, and relevant in contemporary society<span style="color:#ff0063">.</span></p>
+    <div class="section page submission" id="submit2">
+        <h2>SUBMIT YOUR WORK</h2><p></p>
+        <p><span class="text-shadow">MR. MA’AM</span> is seeking literary and artistic work that reflects and explores queer themes and experiences. While writers need not be LGBTQ+, submitted work should be intrinsically linked to queerness and sexuality. Beyond this, there are no formal/genre guidelines. We only ask that the pieces be daring, innovative, and relevant in contemporary society<span style="color:#ff0063">.</span></p>
         <span class="break"></span>
         <p>Accepted genres include short fiction, creative nonfiction, dramatic literature, poetry, and visual art. Submitting to MR. MA’AM is free. Please email submissions to <u style="color:#ff0063">mrmaammag@gmail.com</u>. In the body of the email, include your name, university affiliation, and submission genre (poetry, short story, etc.). Please follow the guidelines below when submitting your piece<span style="color:#ff0063">.</span>
         <span class="break"></span>
@@ -65,40 +69,46 @@
         <div class="dash"></div>
     </div>
     
-    <div class="section page"><h2>MASTHEAD</h2><p></p>
-        <div class="row">
-            <div class="col-xs-6">
-                <h3>Co-Editors</h3>
-                <h4>Jessika Bouvier</h4>
-                <h4>Josh Oberlander</h4>
-                <span class="break"></span>
-                <h3>Publishing Chair</h3>
-                <h4>Justin Fogg</h4>
-                <span class="break"></span>
-                <h3>Design Editor</h3>
-                <h4>Bria Goeller</h4>
-                <span class="break"></span>
-                <h3>Art Director</h3>
-                <h4>Laila Hasnain</h4>
+    <div class="section page teamPage">
+        <div class="animate-in-left">
+            <h2>MASTHEAD</h2><p></p>
+            <div class="row">
+                <div class="col-xs-6">
+                    <h3>Co-Editors</h3>
+                    <h4>Jessika Bouvier</h4>
+                    <h4>Josh Oberlander</h4>
+                    <span class="break"></span>
+                    <h3>Publishing Chair</h3>
+                    <h4>Justin Fogg</h4>
+                    <span class="break"></span>
+                    <h3>Design Editor</h3>
+                    <h4>Bria Goeller</h4>
+                    <span class="break"></span>
+                    <h3>Art Director</h3>
+                    <h4>Laila Hasnain</h4>
+                </div>
+                <div class="col-xs-6">
+                    <h3>Managing Editors</h3>
+                    <h4>Talia Green</h4>
+                    <h4>Alexa Palomo</h4>
+                    <span class="break"></span>
+                    <h3>Marketing Chair</h3>
+                    <h4>Brady Goodman-Williams</h4>
+                    <span class="break"></span>
+                    <h3>Support Staff</h3>
+                    <h4>Liz Rivera</h4>
+                </div>
             </div>
-            <div class="col-xs-6">
-                <h3>Managing Editors</h3>
-                <h4>Talia Green</h4>
-                <h4>Alexa Palomo</h4>
-                <span class="break"></span>
-                <h3>Marketing Chair</h3>
-                <h4>Brady Goodman-Williams</h4>
-                <span class="break"></span>
-                <h3>Support Staff</h3>
-                <h4>Liz Rivera</h4>
-            </div>
+            <div class="dash"></div>
         </div>
-        <div class="dash"></div>
     </div>
-    <div class="section page"><h2>CONTACT US</h2><p></p>
-        <p>Have a question, comment, or just want to say hi?</p>
-        <p>Drop us a line at <u style="color:#ff0063">mrmaammag@gmail.com</u></p>
-        <div class="dash"></div>
+    <div class="section page contactPage">
+        <div class="animate-in-right">
+            <h2>CONTACT US</h2><p></p>
+            <p>Have a question, comment, or just want to say hi?</p>
+            <p>Drop us a line at <u style="color:#ff0063">mrmaammag@gmail.com</u></p>
+            <div class="dash"></div>
+        </div>
     </div>
 </div>
 </body>

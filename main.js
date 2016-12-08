@@ -2,7 +2,6 @@ $(document).ready(function() {
     $('#fullpage').fullpage({
         sectionsColor: ['#ff0063', '#000', '#000', '#000', "#000"],
         anchors: ['home', 'about', 'submit', 'team', 'contact'],
-        normalScrollElements: '.submission',
         autoScrolling: false,
     });
 
@@ -15,7 +14,24 @@ $(document).ready(function() {
         'visual arts',
         'fiction'
     ], {loop: true, delay: '1500'});
+    
+    $(".homeContainer").addClass('animated fadeInDown');  //fade the first div.section in on page load
 });
+
+$(document).on('scroll', function() {
+    if($(this).scrollTop()>=$('.aboutPage').position().top * .5){
+        $(".aboutPage").addClass('animated fadeInLeft');
+    }
+    if ($(this).scrollTop()>=$('.submission').position().top * .6) {
+        $(".submission").addClass('animated fadeInLeft');
+    }
+    if ($(this).scrollTop()>=$('.teamPage').position().top * .75) {
+        $(".teamPage").addClass('animated fadeInLeft');
+    } 
+    if ($(this).scrollTop()>=$('.contactPage').position().top * 0.85) {
+        $(".contactPage").addClass('animated fadeInLeft');
+    }
+})
 
 $(window).scroll(function() {            
        var hT = $('#scroll-to').offset().top,

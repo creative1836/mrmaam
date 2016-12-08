@@ -33,6 +33,7 @@ body {
     font-family: "hk-grotesk-bold";
     font-weight: bold;
     font-size:25px;
+    opacity: 0;
 }
 
 .scramble {
