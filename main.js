@@ -4,7 +4,7 @@ $(document).ready(function() {
         anchors: ['home', 'about', 'submit', 'team', 'contact'],
         autoScrolling: false,
     });
-
+    
     $('#shuffle-text').ShuffleText([
         'poetry',
         'short story',
@@ -12,11 +12,14 @@ $(document).ready(function() {
         'dramatic literature',
         'creative nonfiction',
         'visual arts',
-        'fiction'
+        'fiction',
+        'opinion',
+        'voice'
     ], {loop: true, delay: '1500'});
     
     $(".homeContainer").addClass('animated fadeInDown');  //fade the first div.section in on page load
 });
+ 
 
 $(document).on('scroll', function() {
     if($(this).scrollTop()>=$('.aboutPage').position().top * .5){
