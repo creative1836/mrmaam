@@ -65,6 +65,13 @@ h2 {
     font-family: 'league-gothic', sans-serif;
     font-size: 85px;
     transition: 0.3s ease-in-out;
+    
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 h2:hover {
