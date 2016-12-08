@@ -64,6 +64,13 @@ body {
 h2 {
     font-family: 'league-gothic', sans-serif;
     font-size: 85px;
+    transition: 0.3s ease-in-out;
+}
+
+h2:hover {
+    color: white;
+    text-shadow: -3.5px 3px #ff0063;
+    transition: 0.3s ease-in-out;
 }
 
 p {
@@ -101,14 +108,9 @@ ul {
 
 li  {
     background-color: transparent;
-    color: black;
     font-family: "hk-grotesk-bold";
     font-weight: 600;
     float: left;
-}
-
-li.active a {
-   border-bottom:1px solid white;
 }
 
 ul.topnav {
@@ -134,7 +136,7 @@ ul.topnav:hover{
 
 ul.topnav li a {
   display: inline-block;
-  color: #f2f2f2;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -144,12 +146,12 @@ ul.topnav li a {
 }
 
 ul.topnav li a:hover {
-color: #ff0063;
+    color: #ff0063;
   display: inline-block;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: 0.3s;
   font-size: 17px;
 }
 
