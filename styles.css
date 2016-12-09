@@ -36,16 +36,48 @@ body {
     opacity: 0;
 }
 
+.center-wrapper {
+    text-align: center;
+}
+
 .scramble {
     margin-top: 30%;
-    text-align: center;
     font-family: "hk-grotesk", sans-serif;
     font-size: 45px;
+    display: inline-block;   
 }
+
+.scramble:after {
+  display:block;
+  content: '';
+  border-bottom: solid 3px white;  
+    border-bottom-width: thick;
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+
+.scramble:hover:after {
+    transform: scaleX(1);
+}
+
 
 h2 {
     font-family: 'league-gothic', sans-serif;
-    font-size: 45px;
+    font-size: 85px;
+    transition: 0.3s ease-in-out;
+    
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+h2:hover {
+    color: white;
+    text-shadow: -3.5px 3px #ff0063;
+    transition: 0.3s ease-in-out;
 }
 
 p {
@@ -83,7 +115,6 @@ ul {
 
 li  {
     background-color: transparent;
-    color: black;
     font-family: "hk-grotesk-bold";
     font-weight: 600;
     float: left;
@@ -95,6 +126,15 @@ ul.topnav {
   margin: 0;
   padding: 0;
   overflow: hidden;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    transition: background-color 0.5s;
+    
+}
+
+ul.topnav:hover{
+    transition: background-color 0.5s;
+    background-color: rgba(0,0,0,0.8);
 }
 
 #shuffle-text {
@@ -103,16 +143,17 @@ ul.topnav {
 
 ul.topnav li a {
   display: inline-block;
-  color: #f2f2f2;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  transition: 0.3s;
+  transition: color 0.3s;
   font-size: 17px;
     font-family: "hk-grotesk";
 }
 
 ul.topnav li a:hover {
+    color: #ff0063;
   display: inline-block;
   text-align: center;
   padding: 14px 16px;
@@ -120,6 +161,7 @@ ul.topnav li a:hover {
   transition: 0.3s;
   font-size: 17px;
 }
+
 
 ul.topnav li.icon {display: none;}
 
@@ -168,6 +210,10 @@ h4 {
     .scramble {
         font-size: 30px;
     }
+    
+    h2{
+        font-size: 75px;
+    }
 }
 
 @media screen and (max-width:680px) {
@@ -178,7 +224,7 @@ h4 {
     
     h2 {
         font-family: 'league-gothic', sans-serif;
-        font-size: 35px;
+        font-size: 50px;
     }
 
     p {
@@ -211,6 +257,8 @@ h4 {
     ul.topnav.responsive li {
         float: none;
         display: inline;
+        transition: 0.3s;
+
     }
     
     ul.topnav.responsive li a {
@@ -220,12 +268,12 @@ h4 {
     }
 
     ul.topnav.responsive li:not(:first-child) a:hover {
+        transition: 0.3s;
         display: inline-block;
         color: #ff0063;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
-        transition: 0.3s;
         font-size: 17px;
     }
 }

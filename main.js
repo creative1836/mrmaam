@@ -4,7 +4,7 @@ $(document).ready(function() {
         anchors: ['home', 'about', 'submit', 'team', 'contact'],
         autoScrolling: false,
     });
-
+    
     $('#shuffle-text').ShuffleText([
         'poetry',
         'short story',
@@ -12,18 +12,21 @@ $(document).ready(function() {
         'dramatic literature',
         'creative nonfiction',
         'visual arts',
-        'fiction'
+        'fiction',
+        'opinion',
+        'voice'
     ], {loop: true, delay: '1500'});
     
     $(".homeContainer").addClass('animated fadeInDown');  //fade the first div.section in on page load
 });
+ 
 
 $(document).on('scroll', function() {
     if($(this).scrollTop()>=$('.aboutPage').position().top * .5){
         $(".aboutPage").addClass('animated fadeInLeft');
     }
-    if ($(this).scrollTop()>=$('.submission').position().top * .6) {
-        $(".submission").addClass('animated fadeInLeft');
+    if ($(this).scrollTop()>=$('.submitPage').position().top * .6) {
+        $(".submitPage").addClass('animated fadeInLeft');
     }
     if ($(this).scrollTop()>=$('.teamPage').position().top * .75) {
         $(".teamPage").addClass('animated fadeInLeft');
