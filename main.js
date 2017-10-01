@@ -28,6 +28,9 @@ $(document).on('scroll', function() {
     if ($(this).scrollTop()>=$('.submitPage').position().top * .6) {
         $(".submitPage").addClass('animated fadeInLeft');
     }
+    if ($(this).scrollTop()>=$('.issuePage').position().top * .75) {
+        $(".issuePage").addClass('animated fadeInLeft');
+    } 
     if ($(this).scrollTop()>=$('.teamPage').position().top * .75) {
         $(".teamPage").addClass('animated fadeInLeft');
     } 
