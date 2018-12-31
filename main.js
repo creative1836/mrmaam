@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('#fullpage').fullpage({
         sectionsColor: ['#ff0063', '#000', '#000', '#000', "#000"],
-        anchors: ['home', 'about', 'submit', 'team', 'contact'],
+        anchors: ['home', 'about', 'submit', 'issue', 'team', 'contact'],
         autoScrolling: false,
     });
     
